@@ -2,7 +2,7 @@ import * as pg from 'pg';
 import { Sequelize } from 'sequelize-cockroachdb';
 
 const sequelize = new Sequelize(process.env.DATABASE_URL!, { logging: false, dialectModule: pg });
-
+//const table = sequelize.query('CREATE TABLE IF NOT EXISTS conversations (user_id STRING, entry STRING, speaker STRING, created_at DATE)', {})
 type ConversationLogEntry = {
   entry: string,
   created_at: Date,
